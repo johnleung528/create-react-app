@@ -70,31 +70,34 @@ class Win extends Component {
   render() {
 
     return (
-
-
         <div className="win">
           <Paper className="win-header">
             <div className="header-box">
-              <h2>Hi! John</h2>
-              <Button onClick={this.toggleDrawer} style={{display: 'block', margin: '0px', padding: '0px', width: '15px', textAlign: 'left', fontSize: '1.5em'}}><MenuIcon style={{color: 'white', fontSize: '1.3em', margin: '0'}}/>{this.state.stat.rn}</Button>
+              <h3 style={{display: 'inline-block', position: 'relative', width: '50%', marginTop: '0.5em'}}>Hi! John</h3>
+              <h3 style={{display: 'inline-block', position: 'relative', width: '50%'}}>Hccccccci!</h3>
             </div>
             <div className="header-box">
-              <h2 style={{marginRight: "30%"}}>Hi!</h2>
-                <Select
-                  value={this.state.stat.rn}
-                  onChange={this.handleChange}
-                  className='win-select'
-                  inputProps={{
-                     name: 'People Group',
-                     id: 'people-group',
-                  }}
-                >
-                  <MenuItem value={10}>Ten</MenuItem>
-                  <MenuItem value={20}>Twenty</MenuItem>
-                  <MenuItem value={30}>Thirty</MenuItem>
-                </Select>
+              <button
+                onClick={this.toggleDrawer}
+                style={{display: 'block', position: 'relative', float: 'left', boxSizing: 'border-box', border: 'none', height: '100%', width: '50%', padding: '0', margin: '0', backgroundColor: 'red'}}
+              >
+                <MenuIcon
+                 style={{display: 'block', position: 'relative', fontSize: '3em', padding: '0', margin: '0', height: '100%'}} />  {this.state.stat.rn}
+              </button>
 
-
+              <Select
+                value={this.state.stat.rn}
+                onChange={this.handleChange}
+                inputProps={{
+                   name: 'People Group',
+                   id: 'people-group',
+                }}
+                style={{display: 'inline-block', position: 'relative', width: '50%', height: '90%'}}
+              >
+                <MenuItem value={10}>Ten</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
+              </Select>
             </div>
           </Paper>
 

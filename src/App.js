@@ -24,7 +24,19 @@ class App extends Component {
 
         </div>
         <nav className="nav-container">
-          <Nav />
+          <Tabs
+            value={index}
+            fullWidth
+            onChange={this.handleChange}
+            textColor="primary"
+            style={{height: '10vh'}}
+          >
+            <Tab icon={<PhoneIcon style={{opacity: '0'}} />} label='Win' style={{backgroundColor: 'red'}} className='icon-win' />
+            <Tab icon={<PhoneIcon />} label="Build" style={{backgroundColor: '#93e2ff'}}/>
+            <Tab icon={<PersonPinIcon />} label="Campus" style={{backgroundColor: '#ffe375'}}/>
+            <Tab icon={<PersonPinIcon />} label="Stat" style={{backgroundColor: '#80e591'}}/>
+            <Tab icon={<PersonPinIcon />} label="Profile" style={{backgroundColor: '#dbaaff'}}/>
+          </Tabs>
         </nav>
       </div>
     );
